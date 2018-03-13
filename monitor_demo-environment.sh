@@ -1,0 +1,15 @@
+free -m
+
+sudo docker inspect mongodb_demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect ohie-cr-demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect ohie-fr-demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect ohie-il_demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect openxds-demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect oshr-demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect fr-db_demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect ohie-il-console_demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect openmrs-mysql-db --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect postgresql-openxds --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect openempi-db_demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect ohie-ilr-demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
+sudo docker inspect ohie-etl-demo --format="Name: {{.Name}} - Status: {{.State.Status}}"
