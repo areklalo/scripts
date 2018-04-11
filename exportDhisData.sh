@@ -37,8 +37,15 @@ else
     sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY trackedentitydataelementdimension TO STDOUT DELIMITER ';' CSV" > trackedentitydataelementdimension.csv
     sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY trackedentityattributedimension TO STDOUT DELIMITER ';' CSV" > trackedentityattributedimension.csv
 
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY objecttranslation TO STDOUT DELIMITER ';' CSV" > objecttranslation.csv
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY datasettranslations TO STDOUT DELIMITER ';' CSV" > datasettranslations.csv
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY dataelementtranslations TO STDOUT DELIMITER ';' CSV" > dataelementtranslations.csv
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY programtranslations TO STDOUT DELIMITER ';' CSV" > programtranslations.csv
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY programstagetranslations TO STDOUT DELIMITER ';' CSV" > programstagetranslations.csv
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY trackedentityattributetranslations TO STDOUT DELIMITER ';' CSV" > trackedentityattributetranslations.csv
+    sudo docker exec $HOST psql -d dhis2 -U postgres -c "COPY categoryoptiontranslations TO STDOUT DELIMITER ';' CSV" > categoryoptiontranslations.csv
+
     rm dhis-data.tar.gz
     tar -zcvf dhis-data.tar.gz *
     echo "Export completed"
 fi
-
